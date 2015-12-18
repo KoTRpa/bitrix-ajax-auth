@@ -1,0 +1,15 @@
+<div class="marker_ico"></div>
+<div class="marker_popup">
+	<% if(fields.PREVIEW_PICTURE_URL) { %>
+		<img class="marker_popup_img" src="<%= fields.PREVIEW_PICTURE_URL %>" />
+	<% } %>
+	<div class="marker_popup_inner">
+		<h2><%= fields.NAME %> (<%= properties.ADRESS.VALUE %>)</h2>
+		<div class="date">
+			<% for(var i=0; i<properties.TIMETABLES.VALUE.length; i++) { %>
+				<%= properties.TIMETABLES.VALUE[i] %><br />
+			<% } %>
+		</div>
+		<%= fields.PREVIEW_TEXT %>
+	</div>
+</div>
